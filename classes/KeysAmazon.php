@@ -1,12 +1,5 @@
 <?php
-/*
-CLASSE: KeysAmazon
-Busca Chaves de Acesso AWS
-*/
 
-//AKIAQ5Y35CJGCEVSGZRX
-
-//R8iD9lSkC2QI6rCx3Az4UxZjEbAut/lydYtKNrvY
 
 class KeysAmazon
 {
