@@ -1,0 +1,10 @@
+.formulario{
+    padding: 15px;
+     background-color:whitesmoke; 
+     border: 1px grey solid; 
+}
+.titulo{
+    font-weight: bold;
+     text-align:center;
+      text-transform: uppercase;
+}

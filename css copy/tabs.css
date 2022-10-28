@@ -1,0 +1,79 @@
+<!--- CSS do Formulario de Etapas !-->
+							<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.mains {
+  max-width: 800px;
+  padding: 40px;
+  border: 1px solid rgba(0,0,0,.2);
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+.sections {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #abc;
+}
+
+.tabs {
+  display: none;
+}
+
+.labels {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #abc;
+  border: 1px solid transparent;
+}
+
+.labels:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+.labels[for*='1']:before { content: '\f102'; }
+.labels[for*='2']:before { content: '\f7e5'; }
+.labels[for*='3']:before { content: '\f5d2'; }
+.labels[for*='4']:before { content: '\f171'; }
+
+.labels:hover {
+  color: #789;
+  cursor: pointer;
+}
+
+.tabs:checked + .labels {
+  color: #0af;
+  border: 1px solid #abc;
+  border-top: 2px solid #0af;
+  border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+}
+
+@media screen and (max-width: 800px) {
+  .labels {
+    font-size: 0;
+  }
+  .labels:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .labels {
+    padding: 15px;
+  }
+}
+</style>
