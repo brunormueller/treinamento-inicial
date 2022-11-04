@@ -20,7 +20,7 @@ jQuery(document).ready(function () {
 
         if (status == 1) {
           //script para logar
-          location.href = "inicio";
+          location.href = "dashboard";
         } else {
           Swal.fire({
             //title: 'Login',

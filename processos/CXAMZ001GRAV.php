@@ -4,7 +4,7 @@ session_start();
 $id_usuario = $_SESSION['id_usuario'];
 
 include('../Connections/connpdo.php');
-include('../classes/ClassAwsLoad.php');
+include('../classes/ClassAswsPutObject.php');
 
 
 $arquivo_temporario = $_FILES['file']['tmp_name'];
@@ -13,5 +13,5 @@ $delimitador_pastas = "../";
 $pasta = "fotos_usuarios";
 $nome_objeto = $id_usuario . "." . $extensao;
 
-$insert = AwsObjects::send($conn, $pasta, $arquivo_temporario, $nome_objeto, $delimitador_pastas);
+$insert = AwsPutObjects::enviar($conn, $pasta, $arquivo_temporario, $nome_objeto, $delimitador_pastas);
 var_dump($insert);

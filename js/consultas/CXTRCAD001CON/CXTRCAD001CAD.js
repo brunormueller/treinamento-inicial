@@ -17,14 +17,12 @@ $(document).ready(function () {
       data: dados,
       success: function (data) {
         var exp = data.split("_?_");
-
-        // var status = exp[0];
         var mensagem = exp[1];
 
         if (exp[0] == 1) {
           Swal.fire({
             title: "Sucesso",
-            html: "Usuario inserido com sucesso!",
+            // html: "Usuario inserido com sucesso!",
             icon: "success",
           }).then(function () {
             window.location.reload();

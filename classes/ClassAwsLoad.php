@@ -105,8 +105,8 @@ class AwsObjects
 				$presignedUrl = (string)$request->getUri();
 
 				$data .= '
-				<a href="' . $presignedUrl . '" class="fancybox" rel="ligthbox">
-					<img src="' . $presignedUrl . '" class="" name="file" style="width: 300px;height:300px; margin:10px;border-radius: 7px;"  alt="">		
+				<a href="' . $presignedUrl . '" onclick="magnific()" class="fancybox" rel="ligthbox">
+					<img src="' . $presignedUrl . '" class="file" id="'. $caminho .'" name="file" style="width: 300px;height:300px; margin:10px;border-radius: 7px;"  alt="">		
 				</a>
 				<div class="dropdown" style="right: 64px;top: 16px;">
                 <button class="btn dropdown-toggle butao" type="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -9,7 +9,7 @@ use Aws\Exception\AwsException;
 use Aws\S3\Exception\S3Exception;
 
 
-class AwsObjects
+class AwsPutObjects
 {
 	public static function enviar($conn, $pasta, $objeto, $nome_objeto, $delimitador_pastas)
 	{
@@ -51,6 +51,12 @@ class AwsObjects
 				'Key' => $caminho,
 				'SourceFile' => $objeto,
 			]);
+			$insert = $conn->prepare("INSERT INTO fotos (caminho_foto) VALUES ('$caminho')");
+			try {
+				$insert->execute();
+			} catch (PDOException $e) {
+				$e->getMessage();
+			}
 
 
 

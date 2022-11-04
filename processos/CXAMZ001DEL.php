@@ -4,15 +4,15 @@ include('../classes/ClassAwsDelete.php');
 
 date_default_timezone_set('America/Sao_Paulo');
 session_start();
-$extensao = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
+//$extensao = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
 $id_usuario = $_SESSION['id_usuario'];
-$pasta = "fotos_usuarios";
+//$pasta = "fotos_usuarios";
+$caminho = $_POST['file'];
 $delimitador_pastas = '../';
-$nome_objeto = $id_usuario . "." . $extensao;
+//$nome_objeto = $id_usuario . ".jpg";
 
 
-$delete = AwsDeleteObject::delete($conn, $pasta, $nome_objeto, $delimitador_pastas);
-$delete =AwsDeleteObject::deleteBD($conn,$pasta,$nome_objeto);
+$delete = AwsDeleteObject::delete($conn, $caminho, $delimitador_pastas);
+//$deleteBD =AwsDeleteObject::deleteBD($conn,$pasta,$nome_objeto);
 
-var_dump($delete);
- 
+echo ($delete);
